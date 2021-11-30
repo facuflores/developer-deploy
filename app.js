@@ -6,7 +6,7 @@ app.get("/", function (req, res) {
 })
 
 app.get("/env", function (req, res) {
-  const value = process.env.MENSAJE | "MENSAJE POR DEFAULT";
+  const value = process.env.MENSAJE || "MENSAJE POR DEFAULT";
   res.send(value)
 })
 
